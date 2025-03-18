@@ -6,6 +6,8 @@ import SocialIconLink from './SocialIconLink.astro';
 export interface Props {
 	class?: string;
 }
+
+const year = new Date().getFullYear();
 ---
 
 <footer class={Astro.props.class}>
@@ -70,7 +72,9 @@ export interface Props {
 
 	<section class="flex flex-wrap justify-between gap-y-2 py-6 text-sm text-theme-base-600">
 		<p>
-			{'© 2024 | '}
+			{'© '}
+			{year}
+			{' | '}
 			<ExternalLink href="https://astro.build/" target="_blank" rel="noopener noreferrer">
 				{'Astro'}
 			</ExternalLink><span>{' | All Rights Reserved.'}</span>
