@@ -73,7 +73,7 @@ const year = new Date().getFullYear();
 	<section class="flex flex-wrap justify-between gap-y-2 py-6 text-sm text-theme-base-600">
 		<p>
 			{'© '}
-			{year}
+			<span id="footer-year">{year}</span>
 			{' | '}
 			<ExternalLink href="https://astro.build/" target="_blank" rel="noopener noreferrer">
 				{'Astro'}
@@ -89,3 +89,7 @@ const year = new Date().getFullYear();
 		</p>
 	</section>
 </footer>
+
+<script is:inline>
+	document.getElementById('footer-year').innerText = new Date().getFullYear();
+</script>
